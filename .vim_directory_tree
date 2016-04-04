@@ -1,0 +1,245 @@
+.vim
+├── after
+│   └── ftplugin
+│       ├── cpp.vim
+│       └── c.vim
+├── autoload
+│   └── omni
+│       ├── common
+│       │   ├── debug.vim
+│       │   └── utils.vim
+│       └── cpp
+│           ├── complete.vim
+│           ├── includes.vim
+│           ├── items.vim
+│           ├── maycomplete.vim
+│           ├── namespaces.vim
+│           ├── settings.vim
+│           ├── tokenizer.vim
+│           └── utils.vim
+├── autoproto.vim
+├── bundle
+│   ├── vim-go
+│   │   ├── addon-info.json
+│   │   ├── autoload
+│   │   │   └── go
+│   │   │       ├── cmd.vim
+│   │   │       ├── complete.vim
+│   │   │       ├── def.vim
+│   │   │       ├── doc.vim
+│   │   │       ├── errcheck.vim
+│   │   │       ├── fmt.vim
+│   │   │       ├── import.vim
+│   │   │       ├── lint.vim
+│   │   │       ├── oracle.vim
+│   │   │       ├── package.vim
+│   │   │       ├── path.vim
+│   │   │       ├── play.vim
+│   │   │       ├── rename.vim
+│   │   │       ├── textobj.vim
+│   │   │       ├── tool.vim
+│   │   │       ├── ui.vim
+│   │   │       ├── util.vim
+│   │   │       └── vimproc.vim
+│   │   ├── compiler
+│   │   │   └── go.vim
+│   │   ├── doc
+│   │   │   ├── tags
+│   │   │   └── vim-go.txt
+│   │   ├── ftdetect
+│   │   │   └── gofiletype.vim
+│   │   ├── ftplugin
+│   │   │   ├── go
+│   │   │   │   ├── commands.vim
+│   │   │   │   ├── snippets.vim
+│   │   │   │   └── tagbar.vim
+│   │   │   └── go.vim
+│   │   ├── .git
+│   │   │   ├── branches
+│   │   │   ├── config
+│   │   │   ├── description
+│   │   │   ├── HEAD
+│   │   │   ├── hooks
+│   │   │   │   ├── applypatch-msg.sample
+│   │   │   │   ├── commit-msg.sample
+│   │   │   │   ├── post-update.sample
+│   │   │   │   ├── pre-applypatch.sample
+│   │   │   │   ├── pre-commit.sample
+│   │   │   │   ├── prepare-commit-msg.sample
+│   │   │   │   ├── pre-rebase.sample
+│   │   │   │   └── update.sample
+│   │   │   ├── index
+│   │   │   ├── info
+│   │   │   │   └── exclude
+│   │   │   ├── logs
+│   │   │   │   ├── HEAD
+│   │   │   │   └── refs
+│   │   │   │       └── heads
+│   │   │   │           └── master
+│   │   │   ├── objects
+│   │   │   │   ├── info
+│   │   │   │   └── pack
+│   │   │   │       ├── pack-2ed6ae4551d3b011e9726797edee8bdbc19d7b87.idx
+│   │   │   │       └── pack-2ed6ae4551d3b011e9726797edee8bdbc19d7b87.pack
+│   │   │   ├── packed-refs
+│   │   │   └── refs
+│   │   │       ├── heads
+│   │   │       │   └── master
+│   │   │       ├── remotes
+│   │   │       │   └── origin
+│   │   │       │       └── HEAD
+│   │   │       └── tags
+│   │   ├── .gitignore
+│   │   ├── gosnippets
+│   │   │   ├── snippets
+│   │   │   │   └── go.snip
+│   │   │   └── UltiSnips
+│   │   │       └── go.snippets
+│   │   ├── indent
+│   │   │   ├── gohtmltmpl.vim
+│   │   │   └── go.vim
+│   │   ├── plugin
+│   │   │   └── go.vim
+│   │   ├── README.md
+│   │   ├── scripts
+│   │   │   └── test.sh
+│   │   └── syntax
+│   │       ├── godoc.vim
+│   │       ├── gohtmltmpl.vim
+│   │       ├── gotexttmpl.vim
+│   │       ├── go.vim
+│   │       └── vimgo.vim
+│   └── Vundle.vim
+│       ├── autoload
+│       │   ├── vundle
+│       │   │   ├── config.vim
+│       │   │   ├── installer.vim
+│       │   │   └── scripts.vim
+│       │   └── vundle.vim
+│       ├── changelog.md
+│       ├── CONTRIBUTING.md
+│       ├── doc
+│       │   ├── tags
+│       │   └── vundle.txt
+│       ├── .git
+│       │   ├── branches
+│       │   ├── config
+│       │   ├── description
+│       │   ├── HEAD
+│       │   ├── hooks
+│       │   │   ├── applypatch-msg.sample
+│       │   │   ├── commit-msg.sample
+│       │   │   ├── post-update.sample
+│       │   │   ├── pre-applypatch.sample
+│       │   │   ├── pre-commit.sample
+│       │   │   ├── prepare-commit-msg.sample
+│       │   │   ├── pre-rebase.sample
+│       │   │   └── update.sample
+│       │   ├── index
+│       │   ├── info
+│       │   │   └── exclude
+│       │   ├── logs
+│       │   │   ├── HEAD
+│       │   │   └── refs
+│       │   │       └── heads
+│       │   │           └── master
+│       │   ├── objects
+│       │   │   ├── info
+│       │   │   └── pack
+│       │   │       ├── pack-c27e809efcceadac270444f9c9e1dc39ecc82d94.idx
+│       │   │       └── pack-c27e809efcceadac270444f9c9e1dc39ecc82d94.pack
+│       │   ├── packed-refs
+│       │   └── refs
+│       │       ├── heads
+│       │       │   └── master
+│       │       ├── remotes
+│       │       │   └── origin
+│       │       │       └── HEAD
+│       │       └── tags
+│       ├── .gitignore
+│       ├── LICENSE-MIT.txt
+│       ├── README.md
+│       └── test
+│           ├── files
+│           │   └── test.erl
+│           ├── minirc.vim
+│           └── vimrc
+├── c-support
+│   ├── codesnippets
+│   │   ├── calloc_double_matrix.c
+│   │   ├── calloc_int_matrix.c
+│   │   ├── main.c
+│   │   ├── main.cc
+│   │   ├── Makefile
+│   │   ├── Makefile.multi-target.template
+│   │   ├── print_double_array.c.noindent
+│   │   └── print_int_array.c.noindent
+│   ├── c-templates-comm.zip
+│   ├── c-templates+comm.zip
+│   ├── doc
+│   │   ├── ChangeLog
+│   │   └── c-hotkeys.pdf
+│   ├── rc
+│   │   ├── customization.ctags
+│   │   ├── customization.gvimrc
+│   │   ├── customization.indent.pro
+│   │   └── customization.vimrc
+│   ├── scripts
+│   │   └── wrapper.sh
+│   ├── syntax
+│   │   └── c.vim
+│   ├── templates
+│   │   ├── c-class
+│   │   ├── c-class-description
+│   │   ├── c-class-using-new
+│   │   ├── c-error-class
+│   │   ├── c-file-header
+│   │   ├── c-frame
+│   │   ├── c-function-description
+│   │   ├── c-function-description.long
+│   │   ├── c-method-description
+│   │   ├── cpp-class
+│   │   ├── cpp-class-description
+│   │   ├── cpp-class-using-new
+│   │   ├── cpp-error-class
+│   │   ├── cpp-file-header
+│   │   ├── cpp-frame
+│   │   ├── cpp-function-description
+│   │   ├── cpp-function-description.long
+│   │   ├── cpp-method-description
+│   │   ├── cpp-template-class
+│   │   ├── cpp-template-class-using-new
+│   │   ├── c-template-class
+│   │   ├── c-template-class-using-new
+│   │   ├── h-file-header
+│   │   └── hpp-file-header
+│   └── wordlists
+│       ├── c-c++-keywords.list
+│       ├── k+r.list
+│       └── stl_index.list
+├── doc
+│   ├── csupport.txt
+│   ├── NERD_commenter.txt
+│   ├── omnicppcomplete.txt
+│   ├── taglist.txt
+│   └── tags
+├── ftplugin
+│   └── c.vim
+├── .netrwhist
+├── plugin
+│   ├── a.vim
+│   ├── c.vim
+│   ├── doc
+│   │   ├── csupport.txt
+│   │   └── omnicppcomplete.txt
+│   ├── DoxygenToolkit.vim
+│   ├── echofunc.vim
+│   ├── NERD_commenter.vim
+│   ├── tabbar.vim
+│   ├── taglist.vim
+│   ├── winfileexplorer.vim
+│   ├── winmanager.vim
+│   └── wintagexplorer.vim
+└── README.csupport
+
+70 directories, 172 files
