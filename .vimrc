@@ -1,117 +1,118 @@
-"×¢Òâ£º1¡¢±¾vimrcĞèÒªvim7.0ÒÔÉÏ°æ±¾. vim±àÒëÅäÖÃ£º./configure --enable-cscope --enable-multibyte,ÓÃÀ´Ö§³ÖcscopeÒÔ¼°ÖĞÎÄ
-"      2¡¢ÓÃ»§¼ÒÄ¿Â¼ÏÂĞèÒª·ÅÖÃµÄÎÄ¼ş(¼Ğ)°üÀ¨£º.vim .vimrc .cscope_ignorecase.sh(chmod +x)
-"      3¡¢°²×°ctagsĞèÒª5.6°æ±¾ÒÔÉÏ£¬ubuntu ÏÂ sudo apt-get install exuberant-ctags
-"      4¡¢°²×°cscope sudo apt-get install cscope  
-"      5¡¢¸ü¸Ä .cscope_ignorecase.sh ÀïÃæcscope ¿ÉÖ´ĞĞ³ÌĞòµÄÂ·¾¶, ±ÈÈç /usr/bin/cscope
+"æ³¨æ„ï¼š1ã€æœ¬vimrcéœ€è¦vim7.0ä»¥ä¸Šç‰ˆæœ¬. vimç¼–è¯‘é…ç½®ï¼š./configure --enable-cscope --enable-multibyte,ç”¨æ¥æ”¯æŒcscopeä»¥åŠä¸­æ–‡
+"      2ã€ç”¨æˆ·å®¶ç›®å½•ä¸‹éœ€è¦æ”¾ç½®çš„æ–‡ä»¶(å¤¹)åŒ…æ‹¬ï¼š.vim .vimrc .cscope_ignorecase.sh(chmod +x)
+"      3ã€å®‰è£…ctagséœ€è¦5.6ç‰ˆæœ¬ä»¥ä¸Šï¼Œubuntu ä¸‹ sudo apt-get install exuberant-ctags
+"      4ã€å®‰è£…cscope sudo apt-get install cscope  
+"      5ã€æ›´æ”¹ .cscope_ignorecase.sh é‡Œé¢cscope å¯æ‰§è¡Œç¨‹åºçš„è·¯å¾„, æ¯”å¦‚ /usr/bin/cscope
 "
 "s1mba 20150527 v3.0
-" Ôö¼ÓVundle À´¹ÜÀí²å¼ş£¬Ìí¼Ó vim-go ²å¼şÒÔÖ§³Ö go ÓïÑÔ
+" å¢åŠ Vundle æ¥ç®¡ç†æ’ä»¶ï¼Œæ·»åŠ  vim-go æ’ä»¶ä»¥æ”¯æŒ go è¯­è¨€
 "
 "
 "s1mba 20130906 v2.9
-" ½â¾öµÄÎÊÌâ£º,csl´´½¨cscope¹ØÁªÎÄ¼şºóĞèÒªÍË³öÔÙÖØĞÂ±à¼­ÎÄ¼ş²ÅÄÜÊ¹ÓÃ"cscope e"µÈÃüÁî
-" cscope e Ö§³Ö¶Ô´óĞ´×ÖÄ¸µÄËÑË÷:ÏÈ×Ô¶¯×ª»¯ÎªĞ¡Ğ´
+" è§£å†³çš„é—®é¢˜ï¼š,cslåˆ›å»ºcscopeå…³è”æ–‡ä»¶åéœ€è¦é€€å‡ºå†é‡æ–°ç¼–è¾‘æ–‡ä»¶æ‰èƒ½ä½¿ç”¨"cscope e"ç­‰å‘½ä»¤
+" cscope e æ”¯æŒå¯¹å¤§å†™å­—æ¯çš„æœç´¢:å…ˆè‡ªåŠ¨è½¬åŒ–ä¸ºå°å†™
 "
 "s1mba 20130830 v2.8
-" cscopeÕıÔòÆ¥ÅäÊ±Ö§³Ö´óĞ¡Ğ´²»Ãô¸Ğ. take look at .cscope_ignorecase.sh
+" cscopeæ­£åˆ™åŒ¹é…æ—¶æ”¯æŒå¤§å°å†™ä¸æ•æ„Ÿ. take look at .cscope_ignorecase.sh
 "
 "s1mba 20130814 v2.7
-" ctags°æ±¾ĞèÒª5.6ÒÔÉÏ£¬·ñÔòtypedef¶¨ÒåµÄ½á¹¹Ìå×Ô¶¯²¹È«¹¦ÄÜ(omnicppcomplet)ÎŞ·¨Ê¶±ğ±äÁ¿
+" ctagsç‰ˆæœ¬éœ€è¦5.6ä»¥ä¸Šï¼Œå¦åˆ™typedefå®šä¹‰çš„ç»“æ„ä½“è‡ªåŠ¨è¡¥å…¨åŠŸèƒ½(omnicppcomplet)æ— æ³•è¯†åˆ«å˜é‡
 "
 "s1mba 20130814 v2.6
-" ×Ô¶¨Òåc¡¢cpp¡¢hÎÄ¼şÍ·. ¸øµ±Ç°ÎÄ¼şµÄC_AuthorName¸³Öµ¿ÉĞŞ¸ÄÎÄ¼ş×÷Õß, Ä£°å¼û~/.vim/c-support/templates/h-file-header,~/.vim/c-support/templates/c-file-header.ÎÄ¼şÍ·ÖĞµÄdate¸ñÊ½¼û.vim/plugin/c.vimµÄDATE¶¨Òå
+" è‡ªå®šä¹‰cã€cppã€hæ–‡ä»¶å¤´. ç»™å½“å‰æ–‡ä»¶çš„C_AuthorNameèµ‹å€¼å¯ä¿®æ”¹æ–‡ä»¶ä½œè€…, æ¨¡æ¿è§~/.vim/c-support/templates/h-file-header,~/.vim/c-support/templates/c-file-header.æ–‡ä»¶å¤´ä¸­çš„dateæ ¼å¼è§.vim/plugin/c.vimçš„DATEå®šä¹‰
 "
 "s1mba 20130705
-" ĞèÒªvim7.0ÒÔÉÏ°æ±¾,±àÒëÅäÖÃ£º./configure --enable-cscope --enable-multibyte
+" éœ€è¦vim7.0ä»¥ä¸Šç‰ˆæœ¬,ç¼–è¯‘é…ç½®ï¼š./configure --enable-cscope --enable-multibyte
 "
 "s1mba 2011.12.28 v1.5
-"      ÎÄ¼ş¸üĞÂÊ±×Ô¶¯¸üĞÂtaglist
-"      :Tlist Æô¶¯taglist ctrl+w ÇĞ»»´°¿Ú, ÔÚÄ³¸öºê»òÕßº¯ÊıÃûÉÏ ctrl+] ¿ÉÒÔµ¯³ötagsÖĞ³öÏÖµÄ¶¨ÒåºÍÉùÃ÷µÄÎÄ¼şÌáÊ¾
-"      ,csl²úÉúµ±Ç°Ä¿Â¼ÏÂµÄscopeÎÄ¼ş; ,cst Ôö¼Ó/usr/include  /usr/local/include µÄscopeÎÄ¼ş
-"      ²éÕÒ×Ö·û´®Ê±ºöÂÔ´óĞ¡Ğ´
-"      ¼Ç×¡ÉÏ´Î´ò¿ªµÄÎ»ÖÃ
-"      ÈíĞĞÊ×
+"      æ–‡ä»¶æ›´æ–°æ—¶è‡ªåŠ¨æ›´æ–°taglist
+"      :Tlist å¯åŠ¨taglist ctrl+w åˆ‡æ¢çª—å£, åœ¨æŸä¸ªå®æˆ–è€…å‡½æ•°åä¸Š ctrl+] å¯ä»¥å¼¹å‡ºtagsä¸­å‡ºç°çš„å®šä¹‰å’Œå£°æ˜çš„æ–‡ä»¶æç¤º
+"      ,csläº§ç”Ÿå½“å‰ç›®å½•ä¸‹çš„scopeæ–‡ä»¶; ,cst å¢åŠ /usr/include  /usr/local/include çš„scopeæ–‡ä»¶
+"      æŸ¥æ‰¾å­—ç¬¦ä¸²æ—¶å¿½ç•¥å¤§å°å†™
+"      è®°ä½ä¸Šæ¬¡æ‰“å¼€çš„ä½ç½®
+"      è½¯è¡Œé¦–
 "
 "s1mba 20110504 create: 
-" ±¾ÎÄ¼şµÄvimÖ÷ÒªÔ¤ÉèÃüÁî¡¢²å¼şÈçÏÂ(·½À¨ºÅÖĞÎªÃüÁî)£º
-"      ÑÕÉ«(²»ÉËÑÛ¾¦) colorscheme desert
-"      ºº×ÖµÄÖ§³Ö
-"      ²åÈëÄ£Ê½ÏÂ,Ê¹ÓÃctrl+·½Ïò¼üÒÆ¶¯¹â±ê
-"      Statusline×´Ì¬À¸ÏÔÊ¾: µ±Ç°Â·¾¶¡¢µ±Ç°±à¼­ÎÄ¼ş¡¢¹â±êµ±Ç°ĞĞÁĞ
-"      Text options.°üÀ¨×Ô¶¯Ëõ½ø
-"      ´´½¨µ±Ç°Ä¿Â¼ÏÂtaglist[,ctl],°üÀ¨ÏµÍ³º¯Êıtaglist[,ctt]
-"      windows manager: ²é¿´º¯ÊıÁĞ±í¡¢µ±Ç°Ä¿Â¼ÎÄ¼şÁĞ±í[wm],Ê¹ÓÃ ctrl+x, ctrl+z ÇĞ»»´ò¿ªµÄÎÄ¼ş´°¿Ú£¬ctrl+k ¹Ø±Õ´°¿Ú£¨tabbar£©¡£
-"      Ìí¼Ó¶Ôº¯ÊıµÄ×¢ÊÍËµÃ÷£¬¹â±êÑ¡ÖĞº¯ÊıÃûËùÔÚĞĞ[,cf]
-"      ´´½¨ÎÄ¼şÊ±×Ô¶¯Ìí¼ÓÎÄ¼ş(Ö§³Öpl,shÎÄ¼ş¸ñÊ½)µÄ×¢ÊÍ,c/c++ÓÉc.vim×Ô¶¯Íê³É
-"      c.vim:¶¨Òåº¯Êı[,if]£¬Ìí¼Óº¯Êı¡¢ÎÄ¼ş¹¦ÄÜ×¢ÊÍ[,cfu]
-"      a.vim: cpp/hÎÄ¼şÖ®¼äÇĞ»». [,a]
-"      tabÖÇÄÜ²¹È«µ¥´Ê£¨ÒÑ×¢ÊÍ£©
-"      OmniCppComplete: ³ÉÔ±±äÁ¿¡¢º¯Êı×Ô¶¯ÌáÊ¾ (ĞèÒªvim7.0ÒÔÉÏ°æ±¾Ö§³Ö)
-"      À¨ºÅÖÇÄÜÆ¥Åä,×Ô¶¯Ìí¼ÓÓÒÀ¨ºÅ
-"      NERD_commenter:ÖÇÄÜ×¢ÊÍµô¶àĞĞ£¬Ö§³Ö¶àÖÖÎÄ¼ş¸ñÊ½£¬Ñ¡ÖĞ¶àĞĞÄÚÈİºó[,cm]
+" æœ¬æ–‡ä»¶çš„vimä¸»è¦é¢„è®¾å‘½ä»¤ã€æ’ä»¶å¦‚ä¸‹(æ–¹æ‹¬å·ä¸­ä¸ºå‘½ä»¤)ï¼š
+"      é¢œè‰²(ä¸ä¼¤çœ¼ç›) colorscheme desert
+"      æ±‰å­—çš„æ”¯æŒ
+"      æ’å…¥æ¨¡å¼ä¸‹,ä½¿ç”¨ctrl+æ–¹å‘é”®ç§»åŠ¨å…‰æ ‡
+"      StatuslineçŠ¶æ€æ æ˜¾ç¤º: å½“å‰è·¯å¾„ã€å½“å‰ç¼–è¾‘æ–‡ä»¶ã€å…‰æ ‡å½“å‰è¡Œåˆ—
+"      Text options.åŒ…æ‹¬è‡ªåŠ¨ç¼©è¿›
+"      åˆ›å»ºå½“å‰ç›®å½•ä¸‹taglist[,ctl],åŒ…æ‹¬ç³»ç»Ÿå‡½æ•°taglist[,ctt]
+"      windows manager: æŸ¥çœ‹å‡½æ•°åˆ—è¡¨ã€å½“å‰ç›®å½•æ–‡ä»¶åˆ—è¡¨[wm],ä½¿ç”¨ ctrl+x, ctrl+z åˆ‡æ¢æ‰“å¼€çš„æ–‡ä»¶çª—å£ï¼Œctrl+k å…³é—­çª—å£ï¼ˆtabbarï¼‰ã€‚
+"      æ·»åŠ å¯¹å‡½æ•°çš„æ³¨é‡Šè¯´æ˜ï¼Œå…‰æ ‡é€‰ä¸­å‡½æ•°åæ‰€åœ¨è¡Œ[,cf]
+"      åˆ›å»ºæ–‡ä»¶æ—¶è‡ªåŠ¨æ·»åŠ æ–‡ä»¶(æ”¯æŒpl,shæ–‡ä»¶æ ¼å¼)çš„æ³¨é‡Š,c/c++ç”±c.vimè‡ªåŠ¨å®Œæˆ
+"      c.vim:å®šä¹‰å‡½æ•°[,if]ï¼Œæ·»åŠ å‡½æ•°ã€æ–‡ä»¶åŠŸèƒ½æ³¨é‡Š[,cfu]
+"      a.vim: cpp/hæ–‡ä»¶ä¹‹é—´åˆ‡æ¢. [,a]
+"      tabæ™ºèƒ½è¡¥å…¨å•è¯ï¼ˆå·²æ³¨é‡Šï¼‰
+"      OmniCppComplete: æˆå‘˜å˜é‡ã€å‡½æ•°è‡ªåŠ¨æç¤º (éœ€è¦vim7.0ä»¥ä¸Šç‰ˆæœ¬æ”¯æŒ)
+"      æ‹¬å·æ™ºèƒ½åŒ¹é…,è‡ªåŠ¨æ·»åŠ å³æ‹¬å·
+"      NERD_commenter:æ™ºèƒ½æ³¨é‡Šæ‰å¤šè¡Œï¼Œæ”¯æŒå¤šç§æ–‡ä»¶æ ¼å¼ï¼Œé€‰ä¸­å¤šè¡Œå†…å®¹å[,cm]
 "
 "
-"    cscopeµÄÖ÷Òª¹¦ÄÜÊÇÍ¨¹ıÍ¬µÄ×ÓÃüÁî"find"À´ÊµÏÖµÄ£¬
-"    ¾ßÌå¿´±¾ .vimrc ÎÄ¼şÖĞµÄÓ³Éä£¬±ÈÈç ,cfs ±íÊ¾ cscope find s name£¬
-"    Èç¹û¹â±êÃ»Í£ÁôÔÚ·ûºÅÉÏ£¬ĞèÊÖ¹¤ÊäÈë²éÕÒ×Ö¶Î£¬  
-"    ,cwÁĞ³ö²éÕÒ×Ö¶Î³öÏÖµÄÁĞ±í£¬ ctrl+w ÇĞ»»´°¿Ú
-"    cscope find µÄÓÃ·¨:
+"    cscopeçš„ä¸»è¦åŠŸèƒ½æ˜¯é€šè¿‡åŒçš„å­å‘½ä»¤"find"æ¥å®ç°çš„ï¼Œ
+"    å…·ä½“çœ‹æœ¬ .vimrc æ–‡ä»¶ä¸­çš„æ˜ å°„ï¼Œæ¯”å¦‚ ,cfs è¡¨ç¤º cscope find s nameï¼Œ
+"    å¦‚æœå…‰æ ‡æ²¡åœç•™åœ¨ç¬¦å·ä¸Šï¼Œéœ€æ‰‹å·¥è¾“å…¥æŸ¥æ‰¾å­—æ®µï¼Œ  
+"    ,cwåˆ—å‡ºæŸ¥æ‰¾å­—æ®µå‡ºç°çš„åˆ—è¡¨ï¼Œ ctrl+w åˆ‡æ¢çª—å£
+"    cscope find çš„ç”¨æ³•:
 "    cs find c|d|e|f|g|i|s|t name
-"        0 »ò s     ²éÕÒ±¾ C ·ûºÅ(¿ÉÒÔÌø¹ı×¢ÊÍ)
-"        1 »ò g     ²éÕÒ±¾¶¨Òå
-"        2 »ò d     ²éÕÒ±¾º¯Êıµ÷ÓÃµÄº¯Êı
-"        3 »ò c     ²éÕÒµ÷ÓÃ±¾º¯ÊıµÄº¯Êı
-"        4 »ò t     ²éÕÒ±¾×Ö·û´®
-"        6 »ò e     ²éÕÒ±¾ egrep Æ¥ÅäÄ£Ê½
-"        7 »ò f     ²éÕÒ±¾ÎÄ¼ş
-"        8 »ò i     ²éÕÒ°üº¬±¾ÎÄ¼şµÄÎÄ¼ş
+"        0 æˆ– s     æŸ¥æ‰¾æœ¬ C ç¬¦å·(å¯ä»¥è·³è¿‡æ³¨é‡Š)
+"        1 æˆ– g     æŸ¥æ‰¾æœ¬å®šä¹‰
+"        2 æˆ– d     æŸ¥æ‰¾æœ¬å‡½æ•°è°ƒç”¨çš„å‡½æ•°
+"        3 æˆ– c     æŸ¥æ‰¾è°ƒç”¨æœ¬å‡½æ•°çš„å‡½æ•°
+"        4 æˆ– t     æŸ¥æ‰¾æœ¬å­—ç¬¦ä¸²
+"        6 æˆ– e     æŸ¥æ‰¾æœ¬ egrep åŒ¹é…æ¨¡å¼
+"        7 æˆ– f     æŸ¥æ‰¾æœ¬æ–‡ä»¶
+"        8 æˆ– i     æŸ¥æ‰¾åŒ…å«æœ¬æ–‡ä»¶çš„æ–‡ä»¶
 
-" vim³£ÓÃÃüÁî: (×î»ù±¾µÄÃüÁî¿ÉÏÂÔØ"vi/vim¼üÅÌÍ¼")
-"   Ò»¡¢ÃüÁîÄ£Ê½ÏÂ( °´esc¼ü)
-"      1. gd: Ñ¡ÖĞ¹â±êËùÔÚµÄµ¥´Ê. Í¨³£Ê¹ÓÃnÀ´Ìøµ½ÏÂÒ»¸öÏàÍ¬µ¥´Ê,NÎªÉÏÒ»¸ö
-"      2. Ctrl-o: Ìø×ªµ½ÉÏÒ»´ÎµÄ¹â±êËùÔÚÎ»ÖÃ¡£ÓëÖ®¶ÔÓ¦µÄÊÇ: Ctrl-i
-"      3. gf: ´ò¿ª¹â±êËùÔÚµÄÎÄ¼ş(ĞèÒªtaglistµÄÖ§³Ö)
-"      4. gg: Ìøµ½ÎÄ¼şÍ·¡£ÓëÖ®¶ÔÓ¦µÄÊÇÎÄ¼şÎ²: G
-"      5. f+'Ä³¸ö×ÖÄ¸': Ìø×ªµ½µ±Ç°µÄÄ³¸ö×ÖÄ¸ÉÏ
-"      6. Shift-v: Ñ¡ÖĞµ±Ç°ĞĞ¡£Ctrl-v: Ñ¡ÖĞ×ÖÄ¸
-"      7. Ñ¡ÖĞÄ£Ê½ÏÂ+=: Ñ¡ÖĞĞĞ¶ÔÆë
-"      8. Ctrl+w+·½Ïò¼ü(h,l,j,k): ÆÁÄ»Ö®¼äÌø×ª
-"      9. 0: ÈíĞĞÊ× Ïàµ±ÓÚ home
-"      10. ye ¸´ÖÆÒ»¸öµ¥´Ê£¬de É¾³ıÒ»¸öµ¥´Ê¡£w µ½ÏÂÒ»¸öµ¥´ÊµÄ¿ªÍ·£¬e µ½µ±Ç°µ¥´ÊµÄ½áÎ²¡£
-"      11. yy ¸´ÖÆÒ»ĞĞ£¬dd É¾³ıÒ»ĞĞ, ÃüÁîÇ°Ãæ¼ÓÊı×Ö¼´²Ù×÷¶àĞĞ¡£
-"      12. zi ½«Òş²ØµÄ´úÂëĞĞ¶¼´ò¿ª
+" vimå¸¸ç”¨å‘½ä»¤: (æœ€åŸºæœ¬çš„å‘½ä»¤å¯ä¸‹è½½"vi/vimé”®ç›˜å›¾")
+"   ä¸€ã€å‘½ä»¤æ¨¡å¼ä¸‹( æŒ‰escé”®)
+"      1. gd: é€‰ä¸­å…‰æ ‡æ‰€åœ¨çš„å•è¯. é€šå¸¸ä½¿ç”¨næ¥è·³åˆ°ä¸‹ä¸€ä¸ªç›¸åŒå•è¯,Nä¸ºä¸Šä¸€ä¸ª
+"      2. Ctrl-o: è·³è½¬åˆ°ä¸Šä¸€æ¬¡çš„å…‰æ ‡æ‰€åœ¨ä½ç½®ã€‚ä¸ä¹‹å¯¹åº”çš„æ˜¯: Ctrl-i
+"      3. gf: æ‰“å¼€å…‰æ ‡æ‰€åœ¨çš„æ–‡ä»¶(éœ€è¦taglistçš„æ”¯æŒ)
+"      4. gg: è·³åˆ°æ–‡ä»¶å¤´ã€‚ä¸ä¹‹å¯¹åº”çš„æ˜¯æ–‡ä»¶å°¾: G
+"      5. f+'æŸä¸ªå­—æ¯': è·³è½¬åˆ°å½“å‰çš„æŸä¸ªå­—æ¯ä¸Š
+"      6. Shift-v: é€‰ä¸­å½“å‰è¡Œã€‚Ctrl-v: é€‰ä¸­å­—æ¯
+"      7. é€‰ä¸­æ¨¡å¼ä¸‹+=: é€‰ä¸­è¡Œå¯¹é½
+"      8. Ctrl+w+æ–¹å‘é”®(h,l,j,k): å±å¹•ä¹‹é—´è·³è½¬
+"      9. 0: è½¯è¡Œé¦– ç›¸å½“äº home
+"      10. ye å¤åˆ¶ä¸€ä¸ªå•è¯ï¼Œde åˆ é™¤ä¸€ä¸ªå•è¯ã€‚w åˆ°ä¸‹ä¸€ä¸ªå•è¯çš„å¼€å¤´ï¼Œe åˆ°å½“å‰å•è¯çš„ç»“å°¾ã€‚
+"      11. yy å¤åˆ¶ä¸€è¡Œï¼Œdd åˆ é™¤ä¸€è¡Œ, å‘½ä»¤å‰é¢åŠ æ•°å­—å³æ“ä½œå¤šè¡Œã€‚
+"      12. zi å°†éšè—çš„ä»£ç è¡Œéƒ½æ‰“å¼€
 "      13. u: undo  ctrl+r: redo
-"      14. :num  Ìøµ½Ä³Ò»ĞĞºÅ
-"      15. % : ½«¹â±ê·ÅÔÚÀ¨ºÅÉÏ£¬Æ¥ÅäÀ¨ºÅÒÆ¶¯£¬°üÀ¨ (, {, [ 
-"   ¶ş¡¢ÊäÈëÃüÁîÄ£Ê½ (ÃüÁîÄ£Ê½ÏÂ+Shift+:)
-"      1. vs+filename: ´ò¿ªÎÄ¼ş,ÓëÏÖÓĞÎÄ¼şÉÏÏÂ·ÖÆÁ¡£×óÓÒ·ÖÆÁ: sv
-"         ctrl+w+[num]+ +/-  µ÷Õû¸ß¶È£¬+ < > µ÷Õû¿í¶È
-"      2. n,ms/regex/replace/gc: ½«nĞĞµ½mĞĞÖĞµÄÆ¥Åäµ½regexÕıÔòµÄ×Ö·û´®Ìæ»»³Éreplace
-"      3. g!/pattern/d É¾³ı²»º¬pattern ×Ö·û´®µÄĞĞ¡£
-"      4. set (no)list ¿ÉÒÔ¿´µ½ tab ^I¡¢^M¡¢$ ĞĞ½áÊø·û(ctrl+v+tab-->^I£¬ ctrl+v+M-->^M£¬ctrl+M-->$£©
+"      14. :num  è·³åˆ°æŸä¸€è¡Œå·
+"      15. % : å°†å…‰æ ‡æ”¾åœ¨æ‹¬å·ä¸Šï¼ŒåŒ¹é…æ‹¬å·ç§»åŠ¨ï¼ŒåŒ…æ‹¬ (, {, [ 
+"   äºŒã€è¾“å…¥å‘½ä»¤æ¨¡å¼ (å‘½ä»¤æ¨¡å¼ä¸‹+Shift+:)
+"      1. vs+filename: æ‰“å¼€æ–‡ä»¶,ä¸ç°æœ‰æ–‡ä»¶ä¸Šä¸‹åˆ†å±ã€‚å·¦å³åˆ†å±: sv
+"         ctrl+w+[num]+ +/-  è°ƒæ•´é«˜åº¦ï¼Œ+ < > è°ƒæ•´å®½åº¦
+"      2. n,ms/regex/replace/gc: å°†nè¡Œåˆ°mè¡Œä¸­çš„åŒ¹é…åˆ°regexæ­£åˆ™çš„å­—ç¬¦ä¸²æ›¿æ¢æˆreplace
+"      3. g!/pattern/d åˆ é™¤ä¸å«pattern å­—ç¬¦ä¸²çš„è¡Œã€‚
+"      4. set (no)list å¯ä»¥çœ‹åˆ° tab ^Iã€^Mã€$ è¡Œç»“æŸç¬¦(ctrl+v+tab-->^Iï¼Œ ctrl+v+M-->^Mï¼Œctrl+M-->$ï¼‰
 "
-"   Èı¡¢²åÈëÄ£Ê½ (i,a,I,A)
-"      1. Ctrl-backspace: É¾³ı
-"      2. ctrl+p, ctrl+n ¹Ø¼ü×Ö²¹Æë
-   
+"   ä¸‰ã€æ’å…¥æ¨¡å¼ (i,a,I,A)
+"      1. Ctrl-backspace: åˆ é™¤
+"      2. ctrl+p, ctrl+n å…³é”®å­—è¡¥é½
+" 
+"  vimdiff txt1 txt2  åœ¨vim ä¸­åŒæ—¶æ‰“å¼€ä¸¤ä¸ªæ–‡ä»¶å¹¶åŒ¹é…ä¸åŒçš„åœ°æ–¹
 
-" ²»¼ÓÔØ netrw,Ã»ÓĞ¶ÁĞ´ÍøÂçÎÄ¼şµÄĞèÇó£¬µ«ÕâÑù»áµ¼ÖÂ :E ÃüÁî²»¿ÉÓÃ£¨»ù±¾ÎŞÓÃ£©
-" window manager ¿ÉÒÔÂú×ãÄ¿Â¼ä¯ÀÀºÍ´ò¿ª¶à¸öÎÄ¼şµÄĞèÇó
+" ä¸åŠ è½½ netrw,æ²¡æœ‰è¯»å†™ç½‘ç»œæ–‡ä»¶çš„éœ€æ±‚ï¼Œä½†è¿™æ ·ä¼šå¯¼è‡´ :E å‘½ä»¤ä¸å¯ç”¨ï¼ˆåŸºæœ¬æ— ç”¨ï¼‰
+" window manager å¯ä»¥æ»¡è¶³ç›®å½•æµè§ˆå’Œæ‰“å¼€å¤šä¸ªæ–‡ä»¶çš„éœ€æ±‚
 let g:loaded_netrw       = 1
 let g:loaded_netrwPlugin = 1
 
-"ÉèÖÃÏÔÊ¾ĞĞÊı
+"è®¾ç½®æ˜¾ç¤ºè¡Œæ•°
 set number  
 " set nonu
 
 "Get out of VI's compatible mode..
-" ²»¼æÈİvi£¬·ñÔò»á¶ªÊ§ºÜ¶àvimµÄÌØĞÔ
+" ä¸å…¼å®¹viï¼Œå¦åˆ™ä¼šä¸¢å¤±å¾ˆå¤švimçš„ç‰¹æ€§
 set nocompatible
 
 "Sets how many lines of history VIM har to remember
 set history=7000
 
-"Enable filetype plugin.¿ªÆôÎÄ¼ş×Ô¶¯Ê¶±ğ
+"Enable filetype plugin.å¼€å¯æ–‡ä»¶è‡ªåŠ¨è¯†åˆ«
 filetype plugin on
 filetype indent on
 
@@ -120,9 +121,9 @@ set autoread
 
 "Enable syntax hl
 syntax enable
-"ÉèÖÃÑÕÉ«
+"è®¾ç½®é¢œè‰²
 if has("gui_running")
-    "Í¼ĞÎ½çÃæµÄÉèÖÃ
+    "å›¾å½¢ç•Œé¢çš„è®¾ç½®
     set guioptions-=T
     let psc_style='cool'
     colorscheme darkblue 
@@ -168,7 +169,7 @@ Plugin 'gmarik/Vundle.vim'
 ""Plugin 'user/L9', {'name': 'newL9'}  
   
 " Install Vim-go  
-Plugin 'fatih/vim-go'  " ÔÚ vim ÖĞ :PluginInstall °²×°vim-go
+Plugin 'fatih/vim-go'  " åœ¨ vim ä¸­ :PluginInstall å®‰è£…vim-go
   
 " All of your Plugins must be added before the following line  
 call vundle#end()            " required  
@@ -188,7 +189,7 @@ filetype plugin indent on    " required
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ºº×ÖµÄÖ§³Ö -ÒÀÀµ£ºconfigure vimÊ±ĞèÒªÌí¼ÓÑ¡Ïî£º--enable-multibyte
+" æ±‰å­—çš„æ”¯æŒ -ä¾èµ–ï¼šconfigure vimæ—¶éœ€è¦æ·»åŠ é€‰é¡¹ï¼š--enable-multibyte
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set encoding=gb2312
 set fileencodings=utf-8,gb2312,utf-8,utf-16,ucs-bom,big5,latin1
@@ -219,20 +220,20 @@ map <leader>e :e! ~/.vimrc<cr>
 "Highlight search things
 set hlsearch
 
-"Set backspace. ÍË¸ñÊ±¿ÉÒÆ³ıËùÓĞ×Ö·û
+"Set backspace. é€€æ ¼æ—¶å¯ç§»é™¤æ‰€æœ‰å­—ç¬¦
 set backspace=eol,start,indent
 
 """"""""""""""""""""""""""""""
-" Statusline×´Ì¬À¸
+" StatuslineçŠ¶æ€æ 
 """"""""""""""""""""""""""""""
 "Always hide the statusline
 set laststatus=2
-" !¸ĞÌ¾ºÅµÄÓÃ·¨: ¼û"help E127",Èç¹ûÖ®Ç°ÓĞ´Ëº¯Êı¶¨ÒåÔòÌæ»»µô
+" !æ„Ÿå¹å·çš„ç”¨æ³•: è§"help E127",å¦‚æœä¹‹å‰æœ‰æ­¤å‡½æ•°å®šä¹‰åˆ™æ›¿æ¢æ‰
 function! CurDir()
   let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
   return curdir
 endfunction
-" »ñ¡µ±Ç°¹¤³ÌÃû
+" è·ã€‰é¼»è‚®ã“å ‚ï¿½
 function! ProjectDir()
   let projectDir = substitute(getcwd(), '.*/', "", "")
   return  projectDir
@@ -244,7 +245,7 @@ let g:curdir=CurDir()
 set statusline=%r%{g:curdir}%h\ %f\ %w\ %l/%L:%c
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Text options.Ëõ½ø
+" Text options.ç¼©è¿›
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set expandtab
 set shiftwidth=4
@@ -272,9 +273,9 @@ map <leader>cd :cd %:p:h<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " taglist
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Ìí¼Óµ±Ç°Ä¿Â¼ tags
+" æ·»åŠ å½“å‰ç›®å½• tags
 map <leader>ctl :call UpdateTag() <cr>
-" °üº¬ÏµÍ³Í·ÎÄ¼ş, Ìí¼ÓÏµÍ³tags
+" åŒ…å«ç³»ç»Ÿå¤´æ–‡ä»¶, æ·»åŠ ç³»ç»Ÿtags
 map <leader>ctt :silent !ctags -R -f ~/.vim/systags --c++-kinds=+p --fields=+iaS --exclude=*.js --extra=+q /usr/include /usr/local/include <cr>
 set tags+=~/.vim/systags
 
@@ -310,7 +311,7 @@ map <leader>cfi :cs find i <C-R>=expand("<cfile>")<CR><CR>
 map <leader>csl :silent !find . -name "*.c" -o -name "*.cpp" -o -name "*.h" > cscope.files;cscope -bq;<cr>:call CallCscope()<CR>
 map <leader>cst :silent !find /usr/include /usr/local/include   -name "*.c" -o -name "*.cpp" -o -name "*.h" > cscope.files;cscope -bq;<cr>:call CallCscope()<CR>
 
-"ÎÄ¼ş¸üĞÂÊ±×Ô¶¯¸üĞÂtag,cscope
+"æ–‡ä»¶æ›´æ–°æ—¶è‡ªåŠ¨æ›´æ–°tag,cscope
 func! UpdateTag()
   silent !ctags -R --c++-kinds=+p --fields=+iaS --exclude=*.js --extra=+q
 endfunc
@@ -336,18 +337,18 @@ nmap <C-z> :bp<cr>
 nmap <C-x> :bn<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Ìí¼Ó¶Ôº¯ÊıµÄËµÃ÷
+" æ·»åŠ å¯¹å‡½æ•°çš„è¯´æ˜
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>cf :Dox<cr>
 let g:DoxygenToolkit_licenseTag="My own license\<enter>" 
 let g:DoxygenToolkit_undocTag="DOXIGEN_SKIP_BLOCK" 
-let g:DoxygenToolkit_briefTag_pre = "Ãè  Êö: " 
-let g:DoxygenToolkit_paramTag_pre = "²Î  Êı: " 
-let g:DoxygenToolkit_returnTag =    "·µ»ØÖµ: " 
+let g:DoxygenToolkit_briefTag_pre = "æ  è¿°: " 
+let g:DoxygenToolkit_paramTag_pre = "å‚  æ•°: " 
+let g:DoxygenToolkit_returnTag =    "è¿”å›å€¼: " 
 let g:DoxygenToolkit_briefTag_funcName = "no" 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"´´½¨ÎÄ¼şÊ±×Ô¶¯Ìí¼ÓÎÄ¼şµÄ×¢ÊÍ,c/c++ÓÉc.vim(¿ÉÒÔÍ¨¹ı~/.vim/c-support/templates/c-file-headerÎÄ¼şĞŞ¸ÄÑùÊ½)Íê³É
+"åˆ›å»ºæ–‡ä»¶æ—¶è‡ªåŠ¨æ·»åŠ æ–‡ä»¶çš„æ³¨é‡Š,c/c++ç”±c.vim(å¯ä»¥é€šè¿‡~/.vim/c-support/templates/c-file-headeræ–‡ä»¶ä¿®æ”¹æ ·å¼)å®Œæˆ
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! Addfileinfo()
   call append(3, "@author: s1mba")
@@ -372,7 +373,7 @@ function! Addshreadme()
 :let lnum=lnum+1
   call append(lnum, '    echo "Usage: $0 [OPTION...] argv"' )
 :let lnum=lnum+1
-  call append(lnum, '    echo "¹¦ÄÜ: "' )
+  call append(lnum, '    echo "åŠŸèƒ½: "' )
 :let lnum=lnum+1
   call append(lnum, '    echo' )
 :let lnum=lnum+1
@@ -414,7 +415,7 @@ function! Addshreadme()
 :let lnum=lnum+1
   call append(lnum, '<<COMMENT' )
 :let lnum=lnum+1
-  call append(lnum, '#Àı×Ó' )
+  call append(lnum, '#ä¾‹å­' )
 :let lnum=lnum+1
   call append(lnum, 'if [ $# -ne 1 ]; then' )
 :let lnum=lnum+1
@@ -511,30 +512,30 @@ endf
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" c.vim:º¯Êı¡¢ÎÄ¼ş×¢ÊÍ
+" c.vim:å‡½æ•°ã€æ–‡ä»¶æ³¨é‡Š
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ×Ô¶¯Ìí¼Óc/c++ÎÄ¼şÍ·×¢ÊÍ
+" è‡ªåŠ¨æ·»åŠ c/c++æ–‡ä»¶å¤´æ³¨é‡Š
 let g:C_AuthorName = "s1mba"
-"  map <leader>if :  Ìí¼Ócº¯Êı
-"  map <leader>im :  Ìí¼Ómainº¯Êı
-"  map <leader>cfu :  Ìí¼Óº¯Êı×¢ÊÍ
-"  map <leader>cfr :  Ìí¼Ó×¢ÊÍ
-"  map <leader>pd :  Ìí¼Óºê¶¨Òå
+"  map <leader>if :  æ·»åŠ cå‡½æ•°
+"  map <leader>im :  æ·»åŠ mainå‡½æ•°
+"  map <leader>cfu :  æ·»åŠ å‡½æ•°æ³¨é‡Š
+"  map <leader>cfr :  æ·»åŠ æ³¨é‡Š
+"  map <leader>pd :  æ·»åŠ å®å®šä¹‰
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" a.vim: cpp/hÎÄ¼şÖĞÇĞ»»
+" a.vim: cpp/hæ–‡ä»¶ä¸­åˆ‡æ¢
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"ÔÚcpp/hÎÄ¼şÖĞÇĞ»»,Èç¹ûÃ»ÓĞ¶ÔÓ¦µÄÎÄ¼şÔò´´½¨
+"åœ¨cpp/hæ–‡ä»¶ä¸­åˆ‡æ¢,å¦‚æœæ²¡æœ‰å¯¹åº”çš„æ–‡ä»¶åˆ™åˆ›å»º
 map <leader>a :A <cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"omnicppcomplet×Ô¶¯²¹È«¹¦ÄÜ Ö»Ö§³Övim7.0
+"omnicppcompletè‡ªåŠ¨è¡¥å…¨åŠŸèƒ½ åªæ”¯æŒvim7.0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Ö§³Ö.->µÄ×Ô¶¯²¹È«
+"æ”¯æŒ.->çš„è‡ªåŠ¨è¡¥å…¨
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"tabÖÇÄÜÍê³É
+"tabæ™ºèƒ½å®Œæˆ
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! Smart_TabComplete()
     let line = getline('.')                    
@@ -556,7 +557,7 @@ endfunction
 "inoremap <tab> <c-r>=Smart_TabComplete()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"À¨ºÅÖÇÄÜÆ¥Åä,×Ô¶¯Ìí¼ÓÓÒÀ¨ºÅ
+"æ‹¬å·æ™ºèƒ½åŒ¹é…,è‡ªåŠ¨æ·»åŠ å³æ‹¬å·
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ":inoremap ( ()<ESC>i
 ":inoremap ) <c-r>=ClosePair(')')<CR>
@@ -576,26 +577,26 @@ function! ClosePair(char)
 endf
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"ÖÇÄÜ×¢ÊÍ£¬Ö§³Ö¶àÖÖÎÄ¼ş¸ñÊ½ NERD_commenter
+"æ™ºèƒ½æ³¨é‡Šï¼Œæ”¯æŒå¤šç§æ–‡ä»¶æ ¼å¼ NERD_commenter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" map <leader>cc :µ¥ĞĞ×¢ÊÍ
-" map <leader>cm :¶àĞĞ×¢ÊÍ
+" map <leader>cc :å•è¡Œæ³¨é‡Š
+" map <leader>cm :å¤šè¡Œæ³¨é‡Š
 " let NERDShutUp=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"ÖÇÄÜ²¹È« OmniCppComplete 
+"æ™ºèƒ½è¡¥å…¨ OmniCppComplete 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if exists("completeopt")
   set completeopt=longest,menu
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ºöÂÔ´óĞ¡Ğ´,¿ÉÓÃÓÚ²éÕÒ
+" å¿½ç•¥å¤§å°å†™,å¯ç”¨äºæŸ¥æ‰¾
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set ignorecase
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ¼Ç×¡ÉÏ´Î´ò¿ªµÄÎ»ÖÃ
+" è®°ä½ä¸Šæ¬¡æ‰“å¼€çš„ä½ç½®
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufReadPost *
   \ if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -604,7 +605,7 @@ autocmd BufReadPost *
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ÈíĞĞÊ×
+" è½¯è¡Œé¦–
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "map <leader>0 ^
 map 0 ^
@@ -616,14 +617,14 @@ map <leader>m :!make <CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ¹Ø±ÕÖÇÄÜÆ¥Åä´°¿Ú
+" å…³é—­æ™ºèƒ½åŒ¹é…çª—å£
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif 
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" QuickFix ´°¿Ú. cscope
+" QuickFix çª—å£. cscope
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>cw :cw <CR>
 map <leader>cn :cn <CR>
