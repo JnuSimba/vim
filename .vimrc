@@ -89,6 +89,7 @@
 "      2. n,ms/regex/replace/gc: 将n行到m行中的匹配到regex正则的字符串替换成replace
 "      3. g!/pattern/d 删除不含pattern 字符串的行。
 "      4. set (no)list 可以看到 tab ^I、^M、$ 行结束符(ctrl+v+tab-->^I， ctrl+v+M-->^M，ctrl+M-->$）
+"      5. h vim help manual    
 "
 "   三、插入模式 (i,a,I,A)
 "      1. Ctrl-backspace: 删除
