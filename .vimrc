@@ -81,15 +81,16 @@
 "      11. yy 复制一行，dd 删除一行, 命令前面加数字即操作多行。
 "      12. zi 将隐藏的代码行都打开
 "      13. u: undo  ctrl+r: redo
-"      14. :num  跳到某一行号
-"      15. % : 将光标放在括号上，匹配括号移动，包括 (, {, [ 
+"      14. % : 将光标放在括号上，匹配括号移动，包括 (, {, [ 
+"      15. q: : That brings up an interactive history of : commands, you can edit them, and to run one you hit "enter" on the line. 
 "   二、输入命令模式 (命令模式下+Shift+:)
 "      1. vs+filename: 打开文件,与现有文件上下分屏。左右分屏: sv
 "         ctrl+w+[num]+ +/-  调整高度，+ < > 调整宽度
 "      2. n,ms/regex/replace/gc: 将n行到m行中的匹配到regex正则的字符串替换成replace
 "      3. g!/pattern/d 删除不含pattern 字符串的行。
 "      4. set (no)list 可以看到 tab ^I、^M、$ 行结束符(ctrl+v+tab-->^I， ctrl+v+M-->^M，ctrl+M-->$）
-"      5. h vim help manual    
+"      5. num  跳到某一行号
+"      6. h vim help manual    
 "
 "   三、插入模式 (i,a,I,A)
 "      1. Ctrl-backspace: 删除
