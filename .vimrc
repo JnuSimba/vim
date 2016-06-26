@@ -235,7 +235,7 @@ function! CurDir()
   let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
   return curdir
 endfunction
-" 获〉鼻肮こ堂�
+" 获取路径
 function! ProjectDir()
   let projectDir = substitute(getcwd(), '.*/', "", "")
   return  projectDir
