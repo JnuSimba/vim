@@ -83,6 +83,7 @@
 "      13. u: undo  ctrl+r: redo
 "      14. % : 将光标放在括号上，匹配括号移动，包括 (, {, [ 
 "      15. q: : That brings up an interactive history of : commands, you can edit them, and to run one you hit "enter" on the line. 
+"      16. ctrl+v 选中代码块，1+< 向左缩进一步
 "   二、输入命令模式 (命令模式下+Shift+:)
 "      1. vs+filename: 打开文件,与现有文件上下分屏。左右分屏: sv
 "         ctrl+w+[num]+ +/-  调整高度，+ < > 调整宽度
@@ -95,6 +96,7 @@
 "   三、插入模式 (i,a,I,A)
 "      1. Ctrl-backspace: 删除
 "      2. ctrl+p, ctrl+n 关键字补齐
+"      3. o 下一行插入
 " 
 "  vimdiff txt1 txt2  在vim 中同时打开两个文件并匹配不同的地方
 
@@ -328,7 +330,7 @@ let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 let g:winManagerWindowLayout='FileExplorer|TagList'
 "let g:winManagerWindowLayout='FileExplorer'
-let g:Tb_MaxSize = 3
+let g:MaxSize = 3
 nmap wm :WMToggle<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""
@@ -337,7 +339,8 @@ nmap wm :WMToggle<cr>
 nmap <C-k> :bd<cr>:bp<cr> 
 nmap <C-z> :bp<cr>
 nmap <C-x> :bn<cr>
-
+let g:Tb_MaxSize = 2
+let g:Tb_TabWrap = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 添加对函数的说明
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
