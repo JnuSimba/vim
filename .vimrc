@@ -195,10 +195,11 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 汉字的支持 -依赖：configure vim时需要添加选项：--enable-multibyte
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set encoding=gb2312
+set encoding=utf-8
 set fileencodings=utf-8,gb2312,utf-8,utf-16,ucs-bom,big5,latin1
-set fileencoding=gb2312
-set termencoding=gb2312
+set fileencoding=utf-8
+" same as terminal encoding setting
+set termencoding=utf-8
 set fencs=utf-8,gbk 
 ""set encoding=chinese
 ""set langmenu=zh_CN.GB2312
