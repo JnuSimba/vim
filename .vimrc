@@ -125,6 +125,7 @@ set autoread
 
 "Enable syntax hl
 syntax enable
+syntax on
 "设置颜色
 if has("gui_running")
     "图形界面的设置
@@ -174,7 +175,7 @@ Plugin 'gmarik/Vundle.vim'
   
 " Install Vim-go  
 Plugin 'fatih/vim-go'  " 在 vim 中 :PluginInstall 安装vim-go
-  
+Plugin 'Valloric/YouCompleteMe' " apt-get install cmake && cd ~/.vim/bundle/YouComepleteMe && python install.py
 " All of your Plugins must be added before the following line  
 call vundle#end()            " required  
 filetype plugin indent on    " required  
