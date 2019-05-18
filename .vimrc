@@ -175,6 +175,7 @@ Plugin 'gmarik/Vundle.vim'
   
 " Install Vim-go  
 Plugin 'fatih/vim-go'  " 在 vim 中 :PluginInstall 安装vim-go
+" Install YouCompleteMe
 Plugin 'Valloric/YouCompleteMe' " apt-get install cmake && cd ~/.vim/bundle/YouComepleteMe && python install.py
 " All of your Plugins must be added before the following line  
 call vundle#end()            " required  
@@ -191,7 +192,13 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ  
 " Put your non-Plugin stuff after this line 
 
-
+" configure gocode
+" go get -u github.com/nsf/gocode
+" cd $GOPATH/src/github.com/nsf/gocode/vim && ./update.sh
+" cd $GOPATH/bin; && ./gocode set propose-builtins true && ./gocode set lib-path $GOPATH/pkg/linux_amd64/
+" gocode set里面的两个参数的含意说明：
+" propose-builtins：是否自动提示Go的内置函数、类型和常量，默认为false，不提示。
+" lib-path:默认情况下，gocode只会搜索**$GOPATH/pkg/$GOOS_$GOARCH** 和 $GOROOT/pkg/$GOOS_$GOARCH目录下的包，当然这个设置就是可以设置我们额外的lib能访问的路径
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 汉字的支持 -依赖：configure vim时需要添加选项：--enable-multibyte
